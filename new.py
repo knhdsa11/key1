@@ -53,7 +53,7 @@ def mouse_control_loop():
             if keyboard.is_pressed("j"):
                 pyautogui.moveRel(0, speedn)
             if keyboard.is_pressed("k"):
-                pyautogui.moveRel(0, +speedn)
+                pyautogui.moveRel(0, -speedn)
             if keyboard.is_pressed("c"):
                 pyautogui.click()
             if keyboard.is_pressed("r"):
