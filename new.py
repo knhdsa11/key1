@@ -13,16 +13,10 @@ lock_keys = [k for k in list("qwertyuiopasdfghjklzxcvbnm")]
 # ==========================
 speedn = 10
 
-def set_speed_fast():
+def set_speed(z):
     global speedn
-    speedn = 50
-    print("⚡ Speed = 50")
-
-def set_speed_normal():
-    global speedn
-    speedn = 10
-    print("🐢 Speed = 10")
-
+    speedn = z
+    print(f"⚡ Speed = {z}")
 
 # ==========================
 # โหมดควบคุมเมาส์ (toggle)
@@ -59,9 +53,9 @@ def mouse_control_loop():
             if keyboard.is_pressed("r"):
                 pyautogui.rightClick()
             if keyboard.is_pressed("w"):
-                pyautogui.scroll(500)
+                pyautogui.scroll(100)
             if keyboard.is_pressed("s"):
-                pyautogui.scroll(-500)
+                pyautogui.scroll(-100)
         time.sleep(0.01)
 
 
@@ -76,8 +70,16 @@ def exit_program():
 # ==========================
 # Hotkeys
 # ==========================
-keyboard.add_hotkey("ctrl+1", set_speed_fast)
-keyboard.add_hotkey("ctrl+2", set_speed_normal)
+keyboard.add_hotkey("ctrl+9", set_speed, args="10" )
+keyboard.add_hotkey("ctrl+8", set_speed, args="20"  )
+keyboard.add_hotkey("ctrl+7", set_speed, args="30"  )
+keyboard.add_hotkey("ctrl+6", set_speed, args="40"  )
+keyboard.add_hotkey("ctrl+5", set_speed, args="50"  )
+keyboard.add_hotkey("ctrl+4", set_speed, args="60"  )
+keyboard.add_hotkey("ctrl+3", set_speed, args="70"  )
+keyboard.add_hotkey("ctrl+2", set_speed, args="80"  )
+keyboard.add_hotkey("ctrl+1", set_speed, args="90"  )
+keyboard.add_hotkey("ctrl+0", set_speed, args="5" )
 keyboard.add_hotkey("ctrl+alt+.", toggle_mode)   # toggle โหมด
 keyboard.add_hotkey("ctrl+alt+q", exit_program)  # ออกโปรแกรม
 
