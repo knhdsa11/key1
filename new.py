@@ -70,18 +70,20 @@ def exit_program():
 # ==========================
 # Hotkeys
 # ==========================
-keyboard.add_hotkey("ctrl+9", set_speed, args="10" )
-keyboard.add_hotkey("ctrl+8", set_speed, args="20"  )
-keyboard.add_hotkey("ctrl+7", set_speed, args="30"  )
-keyboard.add_hotkey("ctrl+6", set_speed, args="40"  )
-keyboard.add_hotkey("ctrl+5", set_speed, args="50"  )
-keyboard.add_hotkey("ctrl+4", set_speed, args="60"  )
-keyboard.add_hotkey("ctrl+3", set_speed, args="70"  )
-keyboard.add_hotkey("ctrl+2", set_speed, args="80"  )
-keyboard.add_hotkey("ctrl+1", set_speed, args="90"  )
-keyboard.add_hotkey("ctrl+0", set_speed, args="5" )
-keyboard.add_hotkey("ctrl+alt+.", toggle_mode)   # toggle โหมด
-keyboard.add_hotkey("ctrl+alt+q", exit_program)  # ออกโปรแกรม
+# ==========================
+# Hotkeys ปรับความเร็วเมาส์
+# ==========================
+keyboard.add_hotkey("ctrl+0", lambda: set_speed(5))
+keyboard.add_hotkey("ctrl+1", lambda: set_speed(10))
+keyboard.add_hotkey("ctrl+2", lambda: set_speed(20))
+keyboard.add_hotkey("ctrl+3", lambda: set_speed(30))
+keyboard.add_hotkey("ctrl+4", lambda: set_speed(40))
+keyboard.add_hotkey("ctrl+5", lambda: set_speed(50))
+keyboard.add_hotkey("ctrl+6", lambda: set_speed(60))
+keyboard.add_hotkey("ctrl+7", lambda: set_speed(70))
+keyboard.add_hotkey("ctrl+8", lambda: set_speed(80))
+keyboard.add_hotkey("ctrl+9", lambda: set_speed(90))
+
 
 # ==========================
 # Run
