@@ -3,7 +3,7 @@ import threading
 import time
 import pyautogui
 
-# ==========================A
+# ==========================
 # รายการปุ่มที่ต้องการบล็อก (เว้น h, q สำหรับ hotkey)
 # ==========================
 lock_keys = [k for k in list("qwertyuiopasdfghjklzxcvbnm")]
