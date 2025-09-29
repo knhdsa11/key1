@@ -61,7 +61,7 @@ def mouse_control_loop():
             if keyboard.is_pressed("w"):
                 pyautogui.scroll(500)
             if keyboard.is_pressed("s"):
-                pyautogui.scroll(500)
+                pyautogui.scroll(-500)
         time.sleep(0.01)
 
 
