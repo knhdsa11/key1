@@ -67,9 +67,9 @@ def exit_program():
     exit()
 
 
-# ==========================
-# Hotkeys
-# ==========================
+
+keyboard.add_hotkey("ctrl+alt+.", toggle_mode)
+keyboard.add_hotkey("ctrl+alt+q", exit_program) # ออกโปรแกรม
 # ==========================
 # Hotkeys ปรับความเร็วเมาส์
 # ==========================
